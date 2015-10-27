@@ -1,0 +1,37 @@
+{
+  "name": "min",
+  "authors": [
+    "Owen Versteeg <me@owenversteeg.com>",
+    "Scott O'Hara"
+  ],
+  "description": "The world's smallest CSS framework - only 995 bytes.",
+  "main": "entireframework.min.css",
+  "ignore": [
+    ".gitignore",
+    "CNAME",
+    "**/*.md",
+    "**/*.html",
+    "**/*.sh",
+    "**/*.js",
+    "**/*.ico",
+    "**/*.php",
+    "download.less"
+  ],
+  "keywords": [
+    "min",
+    "mincss",
+    "minimal"
+  ],
+  "license": "MIT",
+  "homepage": "http://minfwk.com",
+  "_release": "670da6b491",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "670da6b4911dd86b396e7853ec6b51bd755ac849"
+  },
+  "_source": "git://github.com/minfwk/min-bower.git",
+  "_target": "*",
+  "_originalSource": "min",
+  "_direct": true
+}

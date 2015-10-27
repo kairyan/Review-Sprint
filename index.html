@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <div class="tunes"></div>
+  <br>
+  <br>
+  <br>
+  <div id="roomselect"></div>
+  <div id = "main"> 
+  <form action ="#" id="send" method ="post">
+<input type="text" name="message" id="message"/>
+<input type="submit" name="submit" class ="submit"/>
+</form>
+</div>
+
+<div id="chats"> </div>
+   <link rel="stylesheet" href="style/style.css">
+   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+	<script src="env/config.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="data/data.js"></script>
+    <script src="models/SongModel.js"></script>
+    <script src="collections/Songs.js"></script>
+    <script src="collections/SongQueue.js"></script>
+    <script src="models/AppModel.js"></script>
+    <script src="views/PlayerView.js"></script>
+    <script src="views/LibraryView.js"></script>
+    <script src="views/LibraryEntryView.js"></script>
+    <script src="views/AppView.js"></script>
+    <script src="views/SongQueueView.js"></script>
+    <script src="views/SongQueueEntryView.js"></script>
+   <script> 
+     $(function(){
+
+     	 var library = new Songs(songData);
+        var app = new AppModel({library: library});
+       // console.log(app)
+         var appView = new AppView({model: app});
+       $('.tunes').append(appView.render());
+      
+
+
+
+
+       var messages = new Messages();
+       messages.loadMsg();
+       var messagesView = new MessagesView({el:$('#chats'), collection:messages})
+     var formView = new FormView({el:$('#main'),collection:messages})
+     var rooms = new RoomNames();
+     rooms.loadMsg();
+    // var roomsView = new RoomsView({el:$('#roomselect'),collection:rooms})
+      //setInterval(messages.loadMsg.bind(messages),100)
+     })
+    </script>
+    <!--  <div id = "main"> </div>
+  <form action ="#" id="send" method ="post">
+<input type="text" name="message" id="message"/>
+<input type="submit" name="submit" class ="submit"/>
+</form> -->
+  <!--  <div id="chats"> </div> -->
+   
+<!-- <div id="chats"> </div> -->
+<!-- <form action ="#" id="send" method ="post">
+<input type="text" name="message" id="message"/>
+<input type="submit" name="submit" class ="submit"/>
+</form>
+ -->
+</body>
+</html>
+

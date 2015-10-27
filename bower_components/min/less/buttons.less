@@ -1,0 +1,46 @@
+i, button {
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+button {
+	background: #aaa;
+	box-shadow: 3px 3px #000; /* unshortenable */
+	color: #fff;
+	font-size: 2.5em;
+	padding: 15px 40px 16px;
+	text-decoration: none;
+	margin: .3em .7em;
+	cursor: pointer;
+	border: none;
+	&.btn-a {
+		background: #0ae;
+		&:hover {
+			background: #09d; /* darken(@btn-a-bg, 5%) */
+		}
+		&:active {
+			background: #08b; /* darken(@btn-a-bg, 10%) */
+		}
+	}
+	&.btn-b {
+		background: #3c5;
+		&:hover {
+			background: #2b4; /* darken(@btn-b-bg, 5%) */
+		}
+		&:active {
+			background: #2a4; /* darken(@btn-b-bg, 10%) */
+		}
+	}
+	&.btn-c {
+		background: #d33;
+		&:hover {
+			background: #c22; /* darken(@btn-c-bg, 5%) */
+		}
+		&:active {
+			background: #b22; /* darken(@btn-c-bg, 10%) */
+		}
+	}
+	&.btn-small {
+		padding: 7px 19px;
+		font-size: 16px;
+	}
+}
